@@ -1,0 +1,30 @@
+/* Font Declaration */
+@font-face {
+    font-family: Larsseit-Regular;
+    src: url("../fonts/Larsseit/Larsseit-Regular.otf");
+}
+
+@font-face {
+    font-family: Larsseit-Light;
+    src: url("../fonts/Larsseit/Larsseit-Light.otf");
+}
+
+@font-face {
+    font-family: Larsseit-Thin;
+    src: url("../fonts/Larsseit/Larsseit-Thin.otf");
+}
+
+/* Keyframe Declaration */
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    80% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}

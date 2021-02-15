@@ -1,0 +1,176 @@
+/* Extra Large Screens */
+@media screen and (max-width: 1399px) {
+    /* Dropdown */
+    .dropdown-wrapper {
+        width: 63.84%;
+        margin: 11.3125em auto 0;
+    }
+
+    .cat {
+        width: 106.42%;
+    }
+
+    /* Article */
+    .article-container {
+        margin: 7.9875em 11.025em 0 4.14em;
+    }
+}
+
+/* Large Screens */
+@media screen and (max-width: 1199px) {
+    /* Dropdown */
+    .dropdown-wrapper {
+        width: 69.68%;
+        margin: 10.625em auto 0;
+    }
+
+    .cat {
+        width: 100.14%;
+    }
+
+    /* Article */
+    .article-container {
+        margin: 6.65625em 9.1875em 0 3.375em;
+    }
+}
+
+/* Medium Screens */
+@media screen and (max-width: 991px) {
+    /* Grid System */
+    .md--order--1 {
+        order: 1 !important;
+    }
+
+    .md--order--2 {
+        order: 2 !important;
+    }
+
+    /* Colorblock */
+    .colorblock--upper {
+        display: block;
+    }
+
+    /* Dropdown */
+    .dropdown-wrapper {
+        width: 75.52%;
+        margin: 9.9375em auto 0;
+    }
+
+    .cat {
+        width: 93.86%;
+    }
+
+    /* Article */
+    .article-container {
+        margin: 4.4375em 6.12em 0 2.25em;
+    }
+
+}
+
+/* Small Screens */
+@media screen and (max-width: 767px) {
+    /* Document */
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        line-height: 1.4;
+        margin-top: 12px;
+    }
+
+    hr {
+        margin-top: 41px;
+        margin-bottom: 30px;
+    }
+
+    /* Grid System */
+    .sm--order--1 {
+        order: 1 !important;
+    }
+
+    .sm--order--2 {
+        order: 2 !important;
+    }
+
+    .col-1 {
+        width: 100%;
+    }
+
+    .col-2 {
+        width: 100%;
+    }
+
+    [class*='col-'] {
+        padding: 0;
+    }
+
+    /* Colorblock */
+    .colorblock--upper {
+        display: none;
+    }
+
+    /* Dropdown */
+    .dropdown-wrapper {
+        width: 81.36%;
+        margin: 9.25em auto 0;
+    }
+
+    .cat {
+        width: 250px;
+        bottom: calc(100% + 46px);
+    }
+
+    .dropdown__item {
+        padding: 21px 24px; /* The spec calls for left padding of 24.5px.
+                               Rounding down here to make room for the first list item (31 chars) */
+    }
+
+    .dropdown__item::before {
+        width: 28px;
+        height: 28px;
+        margin-right: 14px;
+    }
+
+    .dropdown__item.icon--strength::before {
+        width: 20px;
+        height: 19px;
+        margin-left: 4px;
+        margin-right: 18px;
+    }
+
+    /* Article */
+    .article-container {
+        text-align: center;
+        margin: 3em 1em 13em;
+    }
+
+    .article__heading {
+        max-width: 331px;
+        margin: 0 auto 31px;
+    }
+
+    .article__subheading {
+        max-width: 332px;
+        margin: 8px auto 39px;
+    }
+
+    .article__content {
+        max-width: 284px;
+        margin: auto;
+    }
+
+    .article__content p {
+        max-width: 278px;
+        margin: auto;
+    }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 576px) {
+    /* Dropdown */
+    .dropdown-wrapper {
+        width: 87.2%;
+        margin: 8.5625em auto 0;
+    }
+}

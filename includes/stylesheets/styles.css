@@ -1,0 +1,281 @@
+/* Document */
+
+html,body {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    color: #27333C;
+    font-family: "Larsseit-Regular", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+h1,h4,p {
+    margin: 0;
+}
+
+h1 {
+    color: #3A5F83;
+    font-family: "Larsseit-Thin", Helvetica, Arial, sans-serif;
+    font-size: 42px;
+    line-height: 1;
+}
+
+h4 {
+    color: #5F83A5;
+    font-family: "Larsseit-Light", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 7px; /* Each section heading in the design spec has an extra 7px of bottom margin (in addition to the line height) */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 5px; /* Each paragraph in the design spec has an extra 5px of bottom margin (in addition to the line height) */
+}
+
+hr {
+    margin-top: 16px;
+    margin-bottom: 19px;
+    border: 1px solid #C5D6E6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.standard--link {
+    color: #0099d7;
+    -webkit-transition: color 200ms ease;
+    -moz-transition: color 200ms ease;
+    transition: color 200ms ease;
+}
+
+.standard--link:hover {
+    color: #1878e0;
+}
+
+
+/* Grid System */
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.page-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+    padding-right: 0;
+}
+
+.col-1 {
+    width: 48.125%;
+    order: 1;
+}
+
+.col-2 {
+    width: 51.875%;
+    order: 2;
+}
+
+
+/* Colorblock */
+
+.colorblock-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.colorblock {
+    position: relative;
+    width: 100%;
+    min-height: 50%;
+}
+
+.colorblock--upper {
+    background-color: #EBF0F6;
+}
+
+.colorblock--lower {
+    background-color: #C5D6E6;
+    min-height: 125%; /* min-height is increased to allow room for the absolutely positioned element ".dropdown__menu" */
+}
+
+
+/* Dropdown */
+
+.dropdown-wrapper {
+    position: relative;
+    width: 58%;
+    margin: 12em auto 0;
+}
+
+.cat {
+    position: absolute;
+    width: 112.7%;
+    max-width: 500px;
+    min-width: 250px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: calc(100% + 52px); /* .cat is positioned relative to its parent, .dropdown-wrapper.
+                                  Positioning it 100% from the bottom places the img directly above the parent.
+                                  After that adding px creates some space between the two.*/
+}
+
+.dropdown {
+    background-color: #fff;
+    padding: 20px;
+    cursor: default;
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+}
+
+.dropdown::after {
+    content: url("../img/shared/chevron-right.svg");
+    float: right;
+    -webkit-transition: transform 300ms ease;
+    -moz-transition: transform 300ms ease;
+    transition: transform 300ms ease;
+}
+
+.dropdown:hover::after {
+    transform: rotate(90deg);
+}
+
+.dropdown--click--active::after {
+    transform: rotate(90deg);
+}
+
+.dropdown:hover .dropdown__menu--animated {
+    display: block;
+}
+
+.dropdown__menu {
+    position: absolute;
+    display: none;
+    width: 95%;
+    padding: 0;
+    margin: auto;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    list-style: none;
+    perspective: 1000px;
+    transform-origin: top center;
+    animation: growDown 300ms ease-in-out forwards;
+}
+
+.dropdown__menu--click--active {
+    display: block;
+}
+
+.dropdown__item {
+    display: flex;
+    background-color: #F7F9FA;
+    padding: 26px 30px;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.6875;
+}
+
+.dropdown__item::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dropdown__item.icon--strength::before {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 22px;
+    background-image: url("../img/icons/icon_01strength.svg");
+}
+
+.dropdown__item.icon--diversity::before {
+    background-image: url("../img/icons/icon_02diversity.svg");
+}
+
+.dropdown__item.icon--hammer::before {
+    background-image: url("../img/icons/icon_03hammer.png");
+}
+
+.dropdown__item.icon--heart::before {
+    background-image: url("../img/icons/icon_04heart.png");
+}
+
+.dropdown__item.icon--scientist::before {
+    background-image: url("../img/icons/icon_05scientist.svg");
+}
+
+.dropdown__item.icon--blueprint::before {
+    background-image: url("../img/icons/icon_06blueprint.svg");
+}
+
+.dropdown__item.icon--investor::before {
+    background-image: url("../img/icons/icon_07investor.svg");
+}
+
+
+/* Article */
+
+.article-container {
+    margin: 8.875em 12.25em 0 4.5em;
+}
+
+.article__heading {
+    max-width: 468px; /* Keeps "friends" on line 2 as intended */
+    margin-bottom: 31px;
+}
+
+.article__subheading {
+    max-width: 449px;
+    margin-bottom: 39px;
+}
+
+.article__content {
+    max-width: 399px;
+}
+
+.article__content p {
+    max-width: 391px;
+}
+
+.faded--paragraph {
+    opacity: 0.7;
+}
+
+
+
+

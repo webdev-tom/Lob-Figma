@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Tom Fafard">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lob Marketing Developer Assignment</title>
+
+    <link rel="stylesheet" href="includes/stylesheets/base.css">
+    <link rel="stylesheet" href="includes/stylesheets/styles.css">
+    <link rel="stylesheet" href="includes/stylesheets/media-styles.css">
+</head>
+<body tabIndex=0>
+<div class="page-container">
+    <div class="colorblock-container col-1 md--order--1 sm--order--2">
+        <div class="colorblock colorblock--upper"></div>
+        <div class="colorblock colorblock--lower">
+            <div class="dropdown-wrapper">
+                <img class="cat" src="includes/img/Cat.png" alt="Cat">
+                <div class="dropdown">
+                    What does Lob value?
+                    <ul class="dropdown__menu dropdown__menu--animated">
+                        <li class="dropdown__item icon--strength">Find Strength in the Collective</li>
+                        <li class="dropdown__item icon--diversity">Power in Diversity</li>
+                        <li class="dropdown__item icon--hammer">Get (Sh)it Done</li>
+                        <li class="dropdown__item icon--heart">Curate Experiences</li>
+                        <li class="dropdown__item icon--scientist">Think Like a Scientist</li>
+                        <li class="dropdown__item icon--blueprint">Draw the Blueprint</li>
+                        <li class="dropdown__item icon--investor">Be an Investor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 md--order--2 sm--order--1">
+        <article id="lob-article">
+            <div class="article-container">
+                <h1 class="article__heading">Life at Lob is filled with pets, foodies, and friends</h1>
+                <p class="article__subheading faded--paragraph">Especially on the Marketing team. You will be part of a team that prioritizes and values collaboration, personal development, and getting things done quickly and at a high quality bar.</p>
+
+                <div class="article__content">
+                    <h4>Attention to detail</h4>
+                    <p>Checks output across browsers and devices. Nothing falls through the cracks; no sloppy code.</p>
+                    <hr aria-hidden="true">
+                    <h4>Skilled front-end</h4>
+                    <p>Strong HTML, CSS and Javascript; ideally some background working in <a href="https://university.webflow.com/courses/webflow-101-crash-course" class="standard--link">Webflow</a>.</p>
+                    <hr aria-hidden="true">
+                    <h4>Communication</h4>
+                    <p>Strong communication skills, especially given you’ll need to be able to walk through projects to many non-devs on the team.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+<script type="text/javascript">
+    let dropdown = document.querySelector('.dropdown'),
+        dropdown__menu = document.querySelector('.dropdown__menu');
+
+    dropdown.addEventListener('click', e => {
+        e.stopPropagation();
+        dropdown.classList.toggle('dropdown--click--active');
+        dropdown__menu.classList.toggle('dropdown__menu--click--active');
+    });
+
+    window.addEventListener('click', () => {
+        dropdown.classList.remove('dropdown--click--active');
+        dropdown__menu.classList.remove('dropdown__menu--click--active');
+    });
+</script>
+</body>
+</html>
